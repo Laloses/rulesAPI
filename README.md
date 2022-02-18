@@ -1,4 +1,4 @@
-# rulesAPI
+# tarjetasAPI
 Micro servicio que se encarga de obtener una conclusion en base a las condiciones enviadas.
 
 El estado actual de este servicio es un escenario de seleccion de tarjetas de credito en base a las elecciones o preferencias del usuario. 
