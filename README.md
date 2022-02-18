@@ -30,7 +30,7 @@ Donde de esta maneja se gestionaria en la base de datos todas las reglas y hecho
 Pero tambien se puede implementar de otra forma, en caso de que la suposicion incial, de expanderse no fuera cierta.
 
 <ol>
-  <h1><li>Sin expación</li></h1>
+  <h1><li>Sin expansión</li></h1>
 </ol>
 En este caso, el API solamente tendría reglas para las tarjetas de crédito y no se implementarian nunca otras para otro tipo de servicio/produto de la éndole (pj. Seguros), por lo que no tendría sentido implementar el sistema de reglas sino dejarlo mas sencillo usando una clase de Tarjetas, como se muestra a continuacion.
 
