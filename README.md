@@ -9,6 +9,14 @@ En base a esta dinamica sencilla, se optó por elegir una estructura de "motor" 
 
 En este caso son 3 condiciones para tomar la decisión de ofrecer las tarjetas de credito, estas condiciones son: Preferencia (Your passion), Salario(Montly salary) y Edad(Age). Los posibles resultados son la última columna de la tabla.
 
+<ol>
+  <h1><li>Sin expansión</li></h1>
+</ol>
+En este caso, el API solamente tendría reglas para las tarjetas de crédito y no se implementarian nunca otras para otro tipo de servicio/produto de la éndole (pj. Seguros), por lo que no tendría sentido implementar el sistema de reglas sino dejarlo mas sencillo usando una clase de Tarjetas, como se muestra a continuacion.
+
+![image](https://user-images.githubusercontent.com/46451243/154756975-b8479820-9b6b-46ed-82cf-25ffb785461f.png)
+
+De esta manera, se almacenarian las tarjetas en una tabla de la base de datos que puede ser tambien alguna otra API que tenga esa informacion (pj. El banco), y el controlador solamente haría una consulta al Repository de tarjetas, o al API, que cumplan con los valores proporcionados.
 
 <ol>
   <h1><li>Sistema de reglas</li></h1>
@@ -28,12 +36,3 @@ Donde de esta maneja se gestionaria en la base de datos todas las reglas y hecho
 ![image](https://user-images.githubusercontent.com/46451243/154757411-50d1939c-6ced-4ad4-ba97-ed0e291b93dc.png)
 
 Pero tambien se puede implementar de otra forma, en caso de que la suposicion incial, de expanderse no fuera cierta.
-
-<ol>
-  <h1><li>Sin expansión</li></h1>
-</ol>
-En este caso, el API solamente tendría reglas para las tarjetas de crédito y no se implementarian nunca otras para otro tipo de servicio/produto de la éndole (pj. Seguros), por lo que no tendría sentido implementar el sistema de reglas sino dejarlo mas sencillo usando una clase de Tarjetas, como se muestra a continuacion.
-
-![image](https://user-images.githubusercontent.com/46451243/154756975-b8479820-9b6b-46ed-82cf-25ffb785461f.png)
-
-De esta manera, se almacenarian las tarjetas en una tabla de la base de datos que puede ser tambien alguna otra API que tenga esa informacion (pj. El banco), y el controlador solamente haría una consulta al Repository de tarjetas, o al API, que cumplan con los valores proporcionados.
