@@ -12,7 +12,6 @@ Para consruir este micro servicio se busca aplicar principios SOLID, y dado que 
 
 Siendo una base de datos entonces hay que definir las tablas (Entities), las cuales no pueden ser Persona o Usuario, pues las 3 condiciones no son suficientes para almacenarse dentro de una entidad de ese estilo, por lo que el esquema de relaciones usando un motor de reglas quedaria como se muestra en la siguiente imagen.
 
-![image](https://user-images.githubusercontent.com/46451243/153544629-5f6c9cd1-bca8-4f4d-946b-3e3e79db3e5e.png)
-
+![image](https://user-images.githubusercontent.com/46451243/154749562-cc24e822-9bb5-4b05-b522-f9fb1d661d9f.png)
 
 De esta maneja se gestionaria en la base de datos todas las reglas y hechos que hagan cumplirlas, siendo que en algun caso de expandir alguna regla con mas hechos, no se tendria que modificar el codigo, siendo tambien posible llevar este esquema a reglas totalmente diferentes reutilizando el codigo. Y el evaluador seria necesario para que haya una clase que se encargue de llevar las entradas del usuario hacia los Repositorys pertinentes y solicitar asi la informacion.
