@@ -9,8 +9,9 @@ En base a esta dinamica sencilla, se optó por elegir una estructura de "motor" 
 
 En este caso son 3 condiciones para tomar la decisión de ofrecer las tarjetas de credito, estas condiciones son: Preferencia (Your passion), Salario(Montly salary) y Edad(Age). Los posibles resultados son la última columna de la tabla.
 
+
 <ol>
-  <li><h2> sistema de reglas</h2></li>
+  <h1><li>Sistema de reglas</li></h1>
 </ol>
 Si bien, en el estado acutal solamente se cuenta con tarjetas de credito, puede darse un escenario de que ahora se eligan otro tipo de tarjetas, hipotecas, etc., por lo que usando los  principios SOLID se puede abstraer para poder extenderse de manera organizada.
 
@@ -29,7 +30,7 @@ Donde de esta maneja se gestionaria en la base de datos todas las reglas y hecho
 Pero tambien se puede implementar de otra forma, en caso de que la suposicion incial, de expanderse no fuera cierta.
 
 <ol>
-  <li><h2>Sin expación</h2></li>
+  <h1><li>Sin expación</li></h1>
 </ol>
 En este caso, el API solamente tendría reglas para las tarjetas de crédito y no se implementarian nunca otras para otro tipo de servicio/produto de la éndole (pj. Seguros), por lo que no tendría sentido implementar el sistema de reglas sino dejarlo mas sencillo usando una clase de Tarjetas, como se muestra a continuacion.
 
