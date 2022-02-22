@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rulesAPI</groupId>
-	<artifactId>rulesAPI</artifactId>
+	<artifactId>tarjetasAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rulesAPI</name>
+	<name>tarjetasAPI</name>
 	<description>Microservicio de consulta de Tarjetas de Credito</description>
 	<properties>
 		<java.version>11</java.version>
