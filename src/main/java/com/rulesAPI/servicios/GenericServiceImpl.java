@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @param <E> Entidad que se hara consulta
  * @param <R> Repository de esa entidad
  */
-public class GenericServiceImpl<E, R extends CrudRepository<E,Integer>> implements GenericService<E>{
+public class GenericServiceImpl<E, R extends CrudRepository<E,Long>> implements GenericService<E>{
 
     protected final R repository;
 
@@ -19,7 +19,7 @@ public class GenericServiceImpl<E, R extends CrudRepository<E,Integer>> implemen
     
     @Override
     @Transactional(readOnly = true)
-    public Optional<E> buscarPorId(Integer id) {
+    public Optional<E> buscarPorId(Long id) {
         return repository.findById(id);
     }
 
@@ -43,7 +43,7 @@ public class GenericServiceImpl<E, R extends CrudRepository<E,Integer>> implemen
 
     @Override
     @Transactional
-    public void eliminarPorId(Integer id) {
+    public void eliminarPorId(Long id) {
         repository.deleteById(id);
     }
     
