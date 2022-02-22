@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author laloses
  */
-public interface ConclusionRepository extends CrudRepository<Conclusion, Integer>{
+public interface ConclusionRepository extends CrudRepository<Conclusion, Long>{
     
 }

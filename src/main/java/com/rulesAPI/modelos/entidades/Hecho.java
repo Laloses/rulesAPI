@@ -1,8 +1,8 @@
 package com.rulesAPI.modelos.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,18 +34,24 @@ import lombok.ToString;
 public class Hecho implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected int id;
+    protected Long id;
     
-    @Column(nullable = false, unique = true)
+    @NotNull
+    @NotEmpty
+    @Column(nullable = false)
     private String nombre;
     
+    @NotNull
+    @NotEmpty
     @Column(nullable = false)
     private String valor;
     
-    @OneToMany(mappedBy = "hecho", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<ReglaHecho> reglasHecho;
+    @ManyToMany(mappedBy = "hechos", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"hecho"})
+    private Set<Regla> reglas;
 
-    public Hecho(String nombre, String valor) {
+    public Hecho(Long id, String nombre, String valor) {
+        this.id = id;
         this.nombre = nombre;
         this.valor = valor;
     }
